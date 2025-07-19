@@ -3,87 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vrikri - Round Wooden Tray</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"/>
+  <title>Round Wooden Tray - Vrikri</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Playfair Display', serif;
-      background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1540574163026-643ea20ade25') no-repeat center center fixed;
       background-size: cover;
-      color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
     }
 
-    .container {
-      max-width: 600px;
-      margin: 80px auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      text-align: center;
+    .product-container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      margin: 40px auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       border-radius: 10px;
+      max-height: 400px;
+      object-fit: cover;
+      margin-bottom: 20px;
     }
 
     h1 {
-      margin-top: 10px;
-      font-size: 28px;
-    }
-
-    p {
-      font-size: 18px;
+      font-size: 2em;
+      margin-bottom: 10px;
     }
 
     .price {
-      font-size: 24px;
-      color: #2e7d32;
-      margin: 15px 0;
+      font-size: 1.5em;
+      color: #ffd700;
+      margin: 10px 0;
     }
 
-    .btn {
-      background: #2e7d32;
-      color: white;
-      padding: 12px 24px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-      text-decoration: none;
+    .description {
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+
+    .pay-button {
       display: inline-block;
+      padding: 12px 25px;
+      background-color: #00b894;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
     }
 
-    .btn:hover {
-      background: #1b5e20;
+    .pay-button:hover {
+      background-color: #019170;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px;
+    .upi-info {
+      margin-top: 20px;
+      font-size: 14px;
+      background-color: #2d3436;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .product-container {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .price {
+        font-size: 1.2em;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="round-wooden-tray.jpg" alt="Round Wooden Tray" />
+  <div class="product-container">
     <h1>Round Wooden Tray</h1>
-    <p>Beautifully handcrafted round wooden tray. Perfect for serving or decor.</p>
-    <div class="price">₹800</div>
+    <img src="product.jpg" alt="Round Wooden Tray">
+    <p class="price">₹800</p>
+    <p class="description">
+      A beautifully handcrafted round wooden tray — perfect for your home, kitchen, or gifting.
+    </p>
 
-    <!-- UPI payment button -->
-    <a class="btn" href="upi://pay?pa=krishnasaini28@fam&pn=Vrikri&am=800&cu=INR" target="_blank">
+    <a class="pay-button" href="upi://pay?pa=krishnasaini28@fam&pn=Vrikri%20Store&cu=INR&am=800">
       Pay ₹800 via PhonePe
     </a>
 
-    <p style="margin-top: 10px;">or scan the QR code below:</p>
-    <img src="qr-code.png" alt="UPI QR Code" style="max-width: 250px; margin-top: 10px;">
+    <div class="upi-info">
+      UPI ID: <b>krishnasaini28@fam</b><br>
+      Use any UPI app to scan and pay manually if needed.
+    </div>
   </div>
 </body>
 </html>
+
 
 
