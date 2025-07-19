@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Round Wooden Tray | Vrikri Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://i.imgur.com/AYVW0tA.jpg'); /* Wooden texture background */
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #5d3a1a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .payment-box {
+      background-color: #fff8e1;
+      padding: 15px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Round Wooden Tray</h1>
+    <img src="your-image.jpg" alt="Round Wooden Tray" />
+    <h2>Price: ₹800</h2>
+
+    <form id="checkoutForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" rows="3" required></textarea>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" required>
+
+      <button type="submit">Add to Cart & Buy Now</button>
+    </form>
+
+    <div id="paymentSection" class="hidden payment-box">
+      <h3>Complete Your Payment</h3>
+      <p>Pay ₹800 to this UPI ID:</p>
+      <p><strong>krishnasaini28@fam</strong></p>
+      <p>Or scan this QR code:</p>
+      <img src="https://i.imgur.com/Tx2pBne.png" alt="PhonePe QR Code" width="200"/>
+
+      <p><strong>After payment, we will contact you to confirm delivery.</strong></p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("checkoutForm");
+    const paymentSection = document.getElementById("paymentSection");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      paymentSection.classList.remove("hidden");
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
