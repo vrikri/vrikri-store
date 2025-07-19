@@ -1,64 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vrikri Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vrikri - Round Wooden Tray</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"/>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background: #f4f4f4;
-    }
-    .product {
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 16px;
-      max-width: 500px;
-      margin: 0 auto;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .product img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
-    .product h2 {
-      margin-top: 16px;
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
     }
-    .product p {
-      margin: 8px 0;
-      color: #555;
+
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
     }
-    .product button {
-      background-color: #007bff;
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .price {
+      font-size: 24px;
+      color: #2e7d32;
+      margin: 15px 0;
+    }
+
+    .btn {
+      background: #2e7d32;
       color: white;
+      padding: 12px 24px;
+      font-size: 18px;
       border: none;
-      padding: 10px 16px;
-      font-size: 16px;
-      border-radius: 4px;
+      border-radius: 8px;
       cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
     }
-    .product button:hover {
-      background-color: #0056b3;
+
+    .btn:hover {
+      background: #1b5e20;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <img src="round-wooden-tray.jpg" alt="Round Wooden Tray" />
+    <h1>Round Wooden Tray</h1>
+    <p>Beautifully handcrafted round wooden tray. Perfect for serving or decor.</p>
+    <div class="price">₹800</div>
 
-  <h1>Welcome to Vrikri Wooden Store</h1>
+    <!-- UPI payment button -->
+    <a class="btn" href="upi://pay?pa=krishnasaini28@fam&pn=Vrikri&am=800&cu=INR" target="_blank">
+      Pay ₹800 via PhonePe
+    </a>
 
-  <div class="product">
-    <img src="IMG_6768.jpg" alt="Round Wooden Tray" />
-    <h2>Round Wooden Tray</h2>
-    <p>Handcrafted rustic round wooden tray with metal handles. Perfect for serving or decor.</p>
-    <p><strong>Price: ₹800</strong></p>
-    <button>Add to Cart</button>
+    <p style="margin-top: 10px;">or scan the QR code below:</p>
+    <img src="qr-code.png" alt="UPI QR Code" style="max-width: 250px; margin-top: 10px;">
   </div>
-
 </body>
 </html>
+
+
