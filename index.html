@@ -1,40 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vrikri | Wooden Products</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Vrikri Wooden Products</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      background: #5a3e1b;
+      color: white;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .product {
+      background: white;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+
+    .product img {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      max-width: 100%;
+      height: auto;
+    }
+
+    .product h2 {
+      font-size: 22px;
+      margin: 15px 0 10px;
+    }
+
+    .product p {
+      color: green;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Vrikri</h1>
-    <p>Handcrafted Wooden Products</p>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#" onclick="toggleCart()">Cart 🛒 (<span id="cart-count">0</span>)</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="products" id="product-list">
-      <!-- Products will be inserted here by JS -->
-    </section>
-  </main>
+  <h1>Welcome to Vrikri</h1>
 
-  <div id="cart" class="cart hidden">
-    <h2>Your Cart</h2>
-    <ul id="cart-items"></ul>
-    <p><strong>Total:</strong> ₹<span id="cart-total">0</span></p>
-    <button onclick="checkout()">Checkout</button>
-    <button onclick="toggleCart()">Close</button>
+  <div class="product">
+    <img src="round_wooden_tray.jpg" alt="Round Wooden Tray" />
+    <h2>Round Wooden Tray</h2>
+    <p>₹749</p>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Vrikri. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
