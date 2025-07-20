@@ -5,23 +5,30 @@
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
 }
+
+/* Body Styling */
 body {
-  background: #f9f6f2;
+  background-image: url('images/wooden.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f9f6f2;
   color: #333;
   line-height: 1.6;
+  margin: 0;
 }
 
-/* Hero Slider */
-.hero-slider {
+/* Hero Text Slider */
+.hero-slider-text {
   position: relative;
-  background: #eee;
+  background: rgba(255, 255, 255, 0.7);
   height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-.slide {
+.slide-text {
   position: absolute;
   opacity: 0;
   font-size: 2rem;
@@ -30,9 +37,36 @@ body {
   width: 100%;
   transition: opacity 0.5s ease;
 }
-.slide.active {
+.slide-text.active {
   opacity: 1;
 }
+
+/* Image Slider */
+.slider {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+.slide-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+/* Slider Buttons (for hero text only) */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -157,57 +191,10 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .hero-slider {
+  .hero-slider-text {
     height: 180px;
     font-size: 1.2rem;
   }
-}
-body {
-  background-image: url('images/wooden.PNG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-/* Slider Styles */
-.slider {
-  width: 100%;
-  max-height: 400px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.slides {
-  display: flex;
-  width: 300%;
-  animation: slide 12s infinite;
-}
-
-.slide {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-@keyframes slide {
-  0%   { transform: translateX(0); }
-  33%  { transform: translateX(-100%); }
-  66%  { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
-}
-
-/* Other default styles (example) */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff8f0;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #deb887;
-  color: white;
 }
 
 
