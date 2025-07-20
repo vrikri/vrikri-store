@@ -7,42 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">Vrikri</div>
+  <header class="navbar">
+    <h1 class="logo">Vrikri</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="contact.html">Contact</a>
-      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
     </nav>
   </header>
 
-  <!-- Cart Section -->
-  <section class="cart">
-    <h2>Your Shopping Cart</h2>
+  <main class="cart" id="cart">
+    <!-- JS fills cart items here -->
+  </main>
 
-    <div class="cart-item">
-      <p><strong>Round Wooden Tray</strong></p>
-      <p>Price: ₹800</p>
-    </div>
-
-    <div class="cart-item">
-      <p><strong>Wooden Spoon Set</strong></p>
-      <p>Price: ₹600</p>
-    </div>
-
-    <hr style="margin: 20px 0;" />
-
-    <p style="font-size: 1.2rem;"><strong>Total:</strong> ₹1400</p>
-
-    <a href="upi://pay?pa=krishnasaini28@fam&pn=Vrikri&am=1400&cu=INR" class="btn" style="margin-top: 20px;">Pay with UPI</a>
-  </section>
-
-  <footer>
+  <footer class="footer">
     <p>&copy; 2025 Vrikri. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
+
