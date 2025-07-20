@@ -2,43 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vrikri – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vrikri - Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Vrikri</h1>
-    <nav><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></nav>
+
+  <header class="navbar">
+    <div class="logo">Vrikri</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" class="cart-btn">Cart</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
-    <div class="products-grid">
-      <!-- Product 1 -->
-      <div class="product" data-id="1" data-name="Round Wooden Tray" data-price="800">
-        <img src="https://syedanstyle.com/wp-content/uploads/2023/06/wooden-tray.jpg" alt="Round Wooden Tray">
-        <h2>Round Wooden Tray</h2>
+
+  <section class="hero" style="background-image: url('images/wood-bg.jpg');">
+    <h1>Handcrafted Wooden Art</h1>
+    <p>Elevate your space with premium wooden designs</p>
+    <a href="shop.html" class="btn">Shop Now</a>
+  </section>
+
+  <section class="featured">
+    <h2>Featured Products</h2>
+    <div class="product-preview">
+      <div class="product">
+        <img src="images/tray.jpg" alt="Round Wooden Tray" />
+        <h3>Round Wooden Tray</h3>
         <p>₹800</p>
-        <button class="add-cart">Add to Cart</button>
+        <button class="btn small add-to-cart" data-name="Round Wooden Tray" data-price="800">Add to Cart</button>
       </div>
-      <!-- Product 2 -->
-      <div class="product" data-id="2" data-name="Wooden Bowl Set" data-price="999">
-        <img src="https://syedanstyle.com/wp-content/uploads/2023/06/wooden-bowl.jpg" alt="Wooden Bowl Set">
-        <h2>Wooden Bowl Set</h2>
-        <p>₹999</p>
-        <button class="add-cart">Add to Cart</button>
-      </div>
-      <!-- Product 3 -->
-      <div class="product" data-id="3" data-name="Rustic Wooden Spoon" data-price="299">
-        <img src="https://syedanstyle.com/wp-content/uploads/2023/06/wooden-spoon.jpg" alt="Rustic Wooden Spoon">
-        <h2>Rustic Wooden Spoon</h2>
-        <p>₹299</p>
-        <button class="add-cart">Add to Cart</button>
+      <div class="product">
+        <img src="images/holder.jpg" alt="Candle Holder" />
+        <h3>Wooden Candle Holder</h3>
+        <p>₹500</p>
+        <button class="btn small add-to-cart" data-name="Wooden Candle Holder" data-price="500">Add to Cart</button>
       </div>
     </div>
-  </main>
+  </section>
+
   <footer>
-    <p>Support: 8923779852</p>
+    <p>&copy; 2025 Vrikri. Support: 8923779852</p>
   </footer>
+
+  <!-- Cart Sidebar -->
+  <div id="cartSidebar" class="cart-sidebar">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <hr />
+    <p><strong>Total: ₹<span id="cartTotal">0</span></strong></p>
+    <a href="upi://pay?pa=krishnasaini28@fam&pn=Vrikri%20Store&cu=INR" class="btn" target="_blank">Pay via UPI</a>
+    <button onclick="closeCart()" class="btn small">Close</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
