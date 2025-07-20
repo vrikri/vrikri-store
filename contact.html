@@ -1,55 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact | Vrikri</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Vrikri</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="navbar">
-  <div class="logo">Vrikri</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="#" class="cart-btn">Cart 🛒</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Vrikri</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
 
-<section class="featured">
-  <h2>Contact Us</h2>
-  <form class="contact-form">
-    <label for="name">Name</label>
-    <input id="name" type="text" placeholder="Your Name" required>
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xqkrbgze" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
 
-    <label for="email">Email</label>
-    <input id="email" type="email" placeholder="Your Email" required>
+    <p style="margin-top: 20px;">
+      Or chat with us on 
+      <a href="https://wa.me/918923779852" target="_blank" style="color:green; text-decoration:underline;">WhatsApp</a>
+    </p>
+  </section>
 
-    <label for="message">Message</label>
-    <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+  <footer>
+    <p>&copy; 2025 Vrikri. All rights reserved.</p>
+  </footer>
 
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-  <p style="text-align:center;">Support: <a href="tel:8923779852">8923779852</a></p>
-</section>
-
-<footer>
-  <p>&copy; 2025 Vrikri</p>
-</footer>
-
-<div id="cartSidebar" class="cart-sidebar">
-  <h3>Your Cart</h3>
-  <div id="cartItems"></div>
-  <hr />
-  <p><strong>Total: ₹<span id="cartTotal">0</span></strong></p>
-  <a href="upi://pay?pa=krishnasaini28@fam&pn=Vrikri%20Store&cu=INR" class="btn" target="_blank">Pay via UPI</a>
-  <button onclick="closeCart()" class="btn small">Close</button>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
+
