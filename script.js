@@ -1,48 +1,35 @@
-// script.js
+// Hero Slider Script
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
 
-let cart = [];
-
-function addToCart(name, price) {
-  cart.push({ name, price: parseInt(price) });
-  updateCart();
-  openCart();
-}
-
-function updateCart() {
-  const cartItems = document.getElementById("cartItems");
-  const cartTotal = document.getElementById("cartTotal");
-
-  cartItems.innerHTML = "";
-  let total = 0;
-
-  cart.forEach(item => {
-    const div = document.createElement("div");
-    div.textContent = `${item.name} - ₹${item.price}`;
-    cartItems.appendChild(div);
-    total += item.price;
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) {
+      slide.classList.add('active');
+    }
   });
-
-  cartTotal.textContent = total;
 }
 
-function openCart() {
-  document.getElementById("cartSidebar").classList.add("open");
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
 }
 
-function closeCart() {
-  document.getElementById("cartSidebar").classList.remove("open");
+function prevSlideFunc() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  showSlide(currentSlide);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".add-to-cart").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const name = btn.dataset.name;
-      const price = btn.dataset.price;
-      addToCart(name, price);
-    });
-  });
+// Event listeners
+if (nextBtn && prevBtn) {
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlideFunc);
+}
 
-  document.querySelectorAll(".cart-btn").forEach(btn => {
-    btn.addEventListener("click", openCart);
-  });
-});
+// Auto-play every 5 seconds
+setInterval(nextSlide, 5000);
+
