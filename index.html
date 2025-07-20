@@ -3,65 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vrikri | Wooden Handcrafted Products</title>
+  <title>Vrikri - Wooden Products</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="navbar">
+  <!-- Header -->
+  <header class="header">
     <div class="logo">Vrikri</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#" class="cart-btn">Cart 🛒</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
     </nav>
   </header>
 
-  <section class="hero" style="background-image: url('images/wood-bg.jpg');">
-    <div class="hero-content">
-      <h1>Handcrafted Wooden Art</h1>
-      <p>Elevate your space with premium wooden designs by Vrikri</p>
-      <a href="shop.html" class="btn">Explore Shop</a>
+  <!-- Hero Slider -->
+  <section class="hero-slider">
+    <div class="slide active">
+      <img src="https://source.unsplash.com/1600x600/?wood,craft" alt="Wood 1" />
+      <div class="slide-caption">Handcrafted Wooden Products</div>
+    </div>
+    <div class="slide">
+      <img src="https://source.unsplash.com/1600x600/?wooden,home" alt="Wood 2" />
+      <div class="slide-caption">Elegant & Natural Designs</div>
+    </div>
+    <div class="slide">
+      <img src="https://source.unsplash.com/1600x600/?wood,decor" alt="Wood 3" />
+      <div class="slide-caption">Made with Love in India</div>
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      <p>“Beautiful craftsmanship! The tray looks amazing in my home.”</p>
+      <span>- Priya S.</span>
+    </div>
+    <div class="testimonial">
+      <p>“Fast delivery and great quality. Highly recommend Vrikri!”</p>
+      <span>- Aman R.</span>
     </div>
   </section>
 
-  <section class="featured">
-    <h2>Featured Products</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/tray.jpg" alt="Round Wooden Tray" />
-        <h3>Round Wooden Tray</h3>
-        <p>₹800</p>
-        <button class="btn small add-to-cart" data-name="Round Wooden Tray" data-price="800">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="images/holder.jpg" alt="Wooden Candle Holder" />
-        <h3>Wooden Candle Holder</h3>
-        <p>₹500</p>
-        <button class="btn small add-to-cart" data-name="Wooden Candle Holder" data-price="500">Add to Cart</button>
-      </div>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Vrikri | Support: <a href="tel:8923779852">8923779852</a></p>
+    <p>&copy; 2025 Vrikri. All rights reserved.</p>
   </footer>
 
-  <!-- Cart Sidebar -->
-  <div id="cartSidebar" class="cart-sidebar">
-    <h3>Your Cart</h3>
-    <div id="cartItems"></div>
-    <hr />
-    <p><strong>Total: ₹<span id="cartTotal">0</span></strong></p>
-    <a href="upi://pay?pa=krishnasaini28@fam&pn=Vrikri%20Store&cu=INR" class="btn" target="_blank">Pay via UPI</a>
-    <button onclick="closeCart()" class="btn small">Close</button>
-  </div>
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/918923779852" class="whatsapp-chat" target="_blank" title="Chat with us on WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+  </a>
 
   <script src="script.js"></script>
 </body>
 </html>
-
 
