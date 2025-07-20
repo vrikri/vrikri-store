@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vrikri - Wooden Products</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vrikri – Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Vrikri</h1>
-        <nav>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="products">
-            <h2>Our Products</h2>
-            <div class="product">
-                <h3>Round Wooden Tray</h3>
-                <p>Price: ₹800</p>
-                <button onclick="buyNow('krishnasaini28@fam')">Buy Now</button>
-            </div>
-            <div class="product">
-                <h3>Square Wooden Plate</h3>
-                <p>Price: ₹650</p>
-                <button onclick="buyNow('krishnasaini28@fam')">Buy Now</button>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Phone: 8923779852</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Vrikri. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <header>
+    <h1>Vrikri</h1>
+    <nav><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></nav>
+  </header>
+  <main>
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product" data-id="1" data-name="Round Wooden Tray" data-price="800">
+        <img src="https://syedanstyle.com/wp-content/uploads/2023/06/wooden-tray.jpg" alt="Round Wooden Tray">
+        <h2>Round Wooden Tray</h2>
+        <p>₹800</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <!-- Product 2 -->
+      <div class="product" data-id="2" data-name="Wooden Bowl Set" data-price="999">
+        <img src="https://syedanstyle.com/wp-content/uploads/2023/06/wooden-bowl.jpg" alt="Wooden Bowl Set">
+        <h2>Wooden Bowl Set</h2>
+        <p>₹999</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <!-- Product 3 -->
+      <div class="product" data-id="3" data-name="Rustic Wooden Spoon" data-price="299">
+        <img src="https://syedanstyle.com/wp-content/uploads/2023/06/wooden-spoon.jpg" alt="Rustic Wooden Spoon">
+        <h2>Rustic Wooden Spoon</h2>
+        <p>₹299</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Support: 8923779852</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
+
