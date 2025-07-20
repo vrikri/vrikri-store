@@ -5,35 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - Vrikri</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .contact-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #654321;
+    }
+    .contact-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-container input,
+    .contact-container textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .contact-container button {
+      background: #654321;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-container button:hover {
+      background: #40240e;
+    }
+    .contact-extra {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .contact-extra a {
+      color: #25D366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">Vrikri</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="contact.html">Contact</a>
-      <a href="cart.html">Cart</a>
-    </nav>
-  </header>
-
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/xqkrbgze" method="POST">
+  <div class="contact-container">
+    <h2>📞 Contact Vrikri</h2>
+    <form onsubmit="alert('Thank you! We will contact you soon.'); return false;">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
 
-    <p style="margin-top: 20px;">
-      Or chat with us on 
-      <a href="https://wa.me/918923779852" target="_blank" style="color:green; text-decoration:underline;">WhatsApp</a>
-    </p>
-  </section>
+    <div class="contact-extra">
+      <p>Need quick help? <a href="https://wa.me/918923779852" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2025 Vrikri. All rights reserved.</p>
@@ -41,4 +75,3 @@
 
 </body>
 </html>
-
