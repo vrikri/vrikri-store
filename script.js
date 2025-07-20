@@ -45,3 +45,15 @@ function showSlide() {
 }
 
 setInterval(showSlide, 3000);
+let slideIndex = 0;
+const slides = document.querySelectorAll(".hero-slider .slide");
+
+function showSlides() {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+  });
+  slideIndex = (slideIndex + 1) % slides.length;
+  slides[slideIndex].classList.add("active");
+}
+
+setInterval(showSlides, 3000);
