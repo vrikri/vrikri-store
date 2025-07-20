@@ -1,61 +1,48 @@
-function getCart() {
-  return JSON.parse(localStorage.getItem('vrikriCart') || '{}');
+// script.js
+
+let cart = [];
+
+function addToCart(name, price) {
+  cart.push({ name, price: parseInt(price) });
+  updateCart();
+  openCart();
 }
-function saveCart(cart) {
-  localStorage.setItem('vrikriCart', JSON.stringify(cart));
-}
-function updateCartCount() {
-  const cart = getCart();
-  const count = Object.values(cart).reduce((sum, item) => sum + item.qty, 0);
-  document.getElementById('cart-count')?.textContent = count;
-}
-function addToCart(id, name, price) {
-  const cart = getCart();
-  if (cart[id]) cart[id].qty++;
-  else cart[id] = { name, price: +price, qty: 1 };
-  saveCart(cart);
-  updateCartCount();
-}
-function renderCartPage() {
-  const container = document.getElementById('cart-items');
-  const totalWrap = document.getElementById('cart-total');
-  if (!container || !totalWrap) return;
-  const cart = getCart();
-  container.innerHTML = '';
+
+function updateCart() {
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+
+  cartItems.innerHTML = "";
   let total = 0;
 
-  for (const id in cart) {
-    const item = cart[id];
-    total += item.price * item.qty;
-    const row = document.createElement('div');
-    row.className = 'cart-row';
-    row.innerHTML = `
-      <div>${item.name}</div>
-      <div>₹${item.price} x ${item.qty}</div>
-      <div>
-        <button class="remove" data-id="${id}">Remove</button>
-      </div>`;
-    container.appendChild(row);
-  }
-
-  totalWrap.textContent = total ? `Total: ₹${total}` : 'Your cart is empty.';
-  container.querySelectorAll('.remove').forEach(btn => {
-    btn.onclick = () => {
-      delete cart[btn.dataset.id];
-      saveCart(cart);
-      renderCartPage();
-      updateCartCount();
-    };
+  cart.forEach(item => {
+    const div = document.createElement("div");
+    div.textContent = `${item.name} - ₹${item.price}`;
+    cartItems.appendChild(div);
+    total += item.price;
   });
+
+  cartTotal.textContent = total;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.add-cart').forEach(btn => {
-    btn.onclick = () => {
-      const p = btn.closest('.product');
-      addToCart(p.dataset.id, p.dataset.name, p.dataset.price);
-    };
+function openCart() {
+  document.getElementById("cartSidebar").classList.add("open");
+}
+
+function closeCart() {
+  document.getElementById("cartSidebar").classList.remove("open");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".add-to-cart").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const name = btn.dataset.name;
+      const price = btn.dataset.price;
+      addToCart(name, price);
+    });
   });
-  renderCartPage();
-  updateCartCount();
+
+  document.querySelectorAll(".cart-btn").forEach(btn => {
+    btn.addEventListener("click", openCart);
+  });
 });
