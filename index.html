@@ -3,130 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vrikri - Wooden Crafts</title>
+  <title>Vrikri - Wooden Store</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- IMAGE SLIDER -->
-  <div class="slider">
-    <div class="slides">
-      <img src="images/slider1.JPG" class="slide" />
-      <img src="images/slider2.JPG" class="slide" />
-      <img src="images/slider3.JPG" class="slide" />
-    </div>
-  </div>
-
-  <!-- HERO SLIDER TEXT (OPTIONAL) -->
-  <section class="hero-slider-text">
-    <div class="slide-text">Handcrafted Wooden Decor</div>
-    <div class="slide-text">New Collection 2025 – Shop Now</div>
-    <div class="slide-text">Sustainable. Elegant. Unique.</div>
-  </section>
-
-  <!-- FEATURED PRODUCTS -->
-  <section class="featured">
-    <h2>🌟 Featured Products</h2>
-    <div class="product-list">
-      <div class="product-card">
-        <img src="images/tray.jpg" alt="Round Wooden Tray" />
-        <h3>Round Wooden Tray</h3>
-        <p>₹800</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/bowl.jpg" alt="Wooden Bowl" />
-        <h3>Wooden Bowl</h3>
-        <p>₹650</p>
-        <button>Add to Cart</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT VRIKRI -->
-  <section class="about">
-    <h2>🪵 About Vrikri</h2>
-    <p>At Vrikri, every product is a result of skilled craftsmanship and love for nature. Our wood is sustainably sourced, hand-finished, and designed to bring elegance into your home.</p>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <h2>💬 What Customers Say</h2>
-    <div class="testimonial">
-      <p>"Absolutely loved the wooden tray. High quality!"</p>
-      <strong>– Priya Sharma ⭐⭐⭐⭐⭐</strong>
-    </div>
-    <div class="testimonial">
-      <p>"Beautiful craftsmanship. Will order again."</p>
-      <strong>– Aman Verma ⭐⭐⭐⭐⭐</strong>
-    </div>
-  </section>
-
-  <!-- SHIPPING INFO -->
-  <section class="shipping">
-    <h2>📦 Shipping & Returns</h2>
-    <p>Fast delivery within 2–5 days across India. 7-day return policy for any manufacturing defects.</p>
-  </section>
-
-  <!-- WHATSAPP CHAT BUTTON -->
-  <a href="https://wa.me/918923779852" class="whatsapp-button" target="_blank">
-    💬 Chat with us
-  </a>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Vrikri. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-<div class="hero-slider">
-  <img src="images/slider1.jpg" class="slide active">
-  <img src="images/slider2.jpg" class="slide">
-  <img src="images/slider3.jpg" class="slide">
-</div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vrikri</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- ✨ Replace this block with improved slider or hero content -->
-  <section class="hero-slider">
-    <div class="slide active"><img src="images/slide1.jpg" alt="Slide 1"></div>
-    <div class="slide"><img src="images/slide2.jpg" alt="Slide 2"></div>
-    <div class="slide"><img src="images/slide3.jpg" alt="Slide 3"></div>
-  </section>
-
-  <script src="script.js" defer></script>
-</body><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vrikri - Wooden Crafts</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Vrikri Wooden Products</h1>
+  <header class="navbar">
+    <h1 class="logo">Vrikri</h1>
+    <nav>
+      <a href="cart.html">Cart 🛒</a>
+    </nav>
   </header>
 
-  <section class="hero-slider">
-    <div class="slide active"><img src="images/slide1.jpg" alt="Wood 1"></div>
-    <div class="slide"><img src="images/slide2.jpg" alt="Wood 2"></div>
-    <div class="slide"><img src="images/slide3.jpg" alt="Wood 3"></div>
+  <section class="hero">
+    <h2>Premium Wooden Products</h2>
+    <p>Crafted by artisans. Delivered with care.</p>
   </section>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <main class="product-grid">
+    <!-- Product Cards -->
+    <div class="product-card">
+      <img src="images/tray1.jpg" alt="Wooden Tray">
+      <h3>Round Wooden Tray</h3>
+      <p>₹499</p>
+      <a href="product.html?id=1" class="btn">View Product</a>
+    </div>
+    <div class="product-card">
+      <img src="images/box1.jpg" alt="Decorative Box">
+      <h3>Wooden Gift Box</h3>
+      <p>₹699</p>
+      <a href="product.html?id=2" class="btn">View Product</a>
+    </div>
+    <div class="product-card">
+      <img src="images/bowl1.jpg" alt="Wood Bowl">
+      <h3>Wooden Fruit Bowl</h3>
+      <p>₹799</p>
+      <a href="product.html?id=3" class="btn">View Product</a>
+    </div>
+    <div class="product-card">
+      <img src="images/clock1.jpg" alt="Wall Clock">
+      <h3>Rustic Wall Clock</h3>
+      <p>₹899</p>
+      <a href="product.html?id=4" class="btn">View Product</a>
+    </div>
+    <div class="product-card">
+      <img src="images/stand1.jpg" alt="Mobile Stand">
+      <h3>Mobile Stand</h3>
+      <p>₹249</p>
+      <a href="product.html?id=5" class="btn">View Product</a>
+    </div>
+    <div class="product-card">
+      <img src="images/coasters1.jpg" alt="Coaster Set">
+      <h3>Coaster Set (6 pcs)</h3>
+      <p>₹299</p>
+      <a href="product.html?id=6" class="btn">View Product</a>
+    </div>
+    <div class="product-card">
+      <img src="images/box2.jpg" alt="Storage Box">
+      <h3>Mini Storage Box</h3>
+      <p>₹349</p>
+      <a href="product.html?id=7" class="btn">View Product</a>
+    </div>
+    <div class="product-card">
+      <img src="images/penstand.jpg" alt="Pen Stand">
+      <h3>Wooden Pen Stand</h3>
+      <p>₹199</p>
+      <a href="product.html?id=8" class="btn">View Product</a>
+    </div>
+    <div class="product-card">
+      <img src="images/lamp1.jpg" alt="Wood Lamp">
+      <h3>Decorative Lamp</h3>
+      <p>₹1299</p>
+      <a href="product.html?id=9" class="btn">View Product</a>
+    </div>
+    <div class="product-card">
+      <img src="images/shelf1.jpg" alt="Wall Shelf">
+      <h3>Wooden Wall Shelf</h3>
+      <p>₹1099</p>
+      <a href="product.html?id=10" class="btn">View Product</a>
+    </div>
+  </main>
 
+  <footer class="footer">
+    <p>&copy; 2025 Vrikri. All rights reserved.</p>
+  </footer>
+</body>
 </html>
 
 
