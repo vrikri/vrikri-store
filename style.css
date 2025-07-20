@@ -196,5 +196,25 @@ footer {
     font-size: 1.2rem;
   }
 }
+.hero-slider {
+  position: relative;
+  background: #eee;
+  height: 250px;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.active {
+  display: block;
+}
 
 
