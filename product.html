@@ -5,32 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Product - Vrikri</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .product-detail {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product-detail img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    .product-detail h2 {
+      font-size: 1.8rem;
+      color: #654321;
+      margin-bottom: 10px;
+    }
+    .product-detail p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    .product-detail button,
+    .product-detail a.upi-button {
+      display: inline-block;
+      background: #654321;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .product-detail button:hover,
+    .product-detail a.upi-button:hover {
+      background: #40240e;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">Vrikri</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="contact.html">Contact</a>
-      <a href="cart.html">Cart</a>
-    </nav>
-  </header>
+  <div class="product-detail">
+    <img src="images/tray.jpg" alt="Round Wooden Tray" />
+    <h2>Round Wooden Tray</h2>
+    <p><strong>Price:</strong> ₹800</p>
+    <p>This handcrafted round wooden tray is perfect for serving or as a decorative piece. Made from natural wood with a smooth finish. Size: 10 inches.</p>
+    
+    <button onclick="alert('🛒 Item added to cart!')">Add to Cart</button><br/>
 
-  <!-- Product Detail Section -->
-  <section class="product-detail">
-    <div class="product-image">
-      <img src="https://source.unsplash.com/600x400/?wooden,plate" alt="Round Wooden Tray" />
-    </div>
-    <div class="product-info">
-      <h2>Round Wooden Tray</h2>
-      <p class="price">₹800</p>
-      <p class="desc">A handcrafted wooden tray made from high-quality sheesham wood, perfect for serving snacks or décor.</p>
-      <a href="upi://pay?pa=krishnasaini28@fam&pn=Vrikri&am=800&cu=INR" class="btn">Buy Now</a>
-    </div>
-  </section>
+    <a href="upi://pay?pa=krishnasaini28@fam&pn=Vrikri&am=800&cu=INR" class="upi-button">Pay via UPI</a>
+  </div>
+
+  <a href="https://wa.me/918923779852" class="whatsapp-button" target="_blank">
+    💬 Chat with us
+  </a>
 
   <footer>
     <p>&copy; 2025 Vrikri. All rights reserved.</p>
