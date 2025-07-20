@@ -2,67 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Shop | Vrikri</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vrikri Shop</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="navbar">
-  <div class="logo">Vrikri</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="#" class="cart-btn">Cart 🛒</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Vrikri</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
 
-<section class="featured">
-  <h2>All Products</h2>
-  <div class="product-grid">
-    <div class="product">
-      <img src="images/tray.jpg" alt="Round Tray" />
-      <h3>Round Wooden Tray</h3>
-      <p>₹800</p>
-      <button class="btn small add-to-cart" data-name="Round Wooden Tray" data-price="800">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="images/holder.jpg" alt="Candle Holder" />
-      <h3>Wooden Candle Holder</h3>
-      <p>₹500</p>
-      <button class="btn small add-to-cart" data-name="Wooden Candle Holder" data-price="500">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="images/bowl.jpg" alt="Carved Wooden Bowl" />
-      <h3>Carved Wooden Bowl</h3>
-      <p>₹600</p>
-      <button class="btn small add-to-cart" data-name="Carved Wooden Bowl" data-price="600">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="images/plate.jpg" alt="Decorative Wooden Plate" />
-      <h3>Decorative Wooden Plate</h3>
-      <p>₹700</p>
-      <button class="btn small add-to-cart" data-name="Decorative Wooden Plate" data-price="700">Add to Cart</button>
-    </div>
-  </div>
-</section>
+  <!-- Shop Section -->
+  <section class="shop">
+    <h2>Our Wooden Products</h2>
+    <div class="product-grid">
+      
+      <div class="product-card">
+        <img src="https://source.unsplash.com/400x300/?wooden,plate" alt="Round Tray">
+        <h3>Round Wooden Tray</h3>
+        <p>₹800</p>
+        <a href="product.html" class="btn">View Product</a>
+      </div>
 
-<footer>
-  <p>&copy; 2025 Vrikri | Support: <a href="tel:8923779852">8923779852</a></p>
-</footer>
+      <div class="product-card">
+        <img src="https://source.unsplash.com/400x300/?wooden,spoon" alt="Spoon Set">
+        <h3>Wooden Spoon Set</h3>
+        <p>₹600</p>
+        <a href="product.html" class="btn">View Product</a>
+      </div>
 
-<div id="cartSidebar" class="cart-sidebar">
-  <h3>Your Cart</h3>
-  <div id="cartItems"></div>
-  <hr />
-  <p><strong>Total: ₹<span id="cartTotal">0</span></strong></p>
-  <a href="upi://pay?pa=krishnasaini28@fam&pn=Vrikri%20Store&cu=INR" class="btn" target="_blank">Pay via UPI</a>
-  <button onclick="closeCart()" class="btn small">Close</button>
-</div>
+      <div class="product-card">
+        <img src="https://source.unsplash.com/400x300/?wooden,bowl" alt="Wooden Bowl">
+        <h3>Wooden Bowl</h3>
+        <p>₹500</p>
+        <a href="product.html" class="btn">View Product</a>
+      </div>
 
-<script src="script.js"></script>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vrikri. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
+
